@@ -58,7 +58,7 @@ git config --global user.email [github email]
 git push origin 190615/woobin
 ```
 
-6. [원격 저장소](https://github.com/jeuxdeau/maratangs)에 접속해서 Pull Request를 만듭니다. base를 `master`로, 방금 만든 본인의 브랜치를 compare 브랜치로 지정합니다.
+6. [원격 저장소](https://github.com/jeuxdeau/maratangs)에 접속해서 Pull Request를 만듭니다. base를 `master`로, 방금 만든 본인의 브랜치를 compare 브랜치로 지정합니다. [풀 리퀘스트 만드는 방법](https://github.com/jeuxdeau/maratangs/issues/3)을 참고해 보세요.
 
 7-1. 리뷰어로 본인을 제외한 모두를 지정하고, 1명 이상에게서 `Approve`를 받아야 합니다.
 
@@ -69,4 +69,5 @@ git push origin 190615/woobin
 ## 참고할만한 문서
 - [마크다운 작성법](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 - [커밋 메시지 작성 규칙](https://djkeh.github.io/articles/How-to-write-a-git-commit-message-kor/)
+- [풀 리퀘스트 만드는 방법](https://github.com/jeuxdeau/maratangs/issues/3)
 - [merge commit, squash and merge, rebase and merge의 차이](https://meetup.toast.com/posts/122)
