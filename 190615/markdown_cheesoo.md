@@ -18,6 +18,6 @@
 - ~~물론 여러분의 지갑도 소중합니다~~
 
 ## 하고 싶은 말
-![이러면 안보이나?](https://namu.wiki/w/파일:attachment/b0138033_50d85974bb59a.jpg) 
+![이러면 안보이나?](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTF50Jlz3zQE-DBKA8spURO6vQ7XNldVpqbxXgKhaVzEzqPnRU) 
 깃을 처음 써보는자....
 그게 바로 나다!
