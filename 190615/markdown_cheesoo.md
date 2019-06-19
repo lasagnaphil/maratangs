@@ -21,3 +21,5 @@
 ![이러면 안보이나?](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTF50Jlz3zQE-DBKA8spURO6vQ7XNldVpqbxXgKhaVzEzqPnRU) 
 깃을 처음 써보는자....
 그게 바로 나다!
+커밋 메세지 고쳤다!
+
