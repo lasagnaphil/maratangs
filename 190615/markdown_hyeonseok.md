@@ -2,6 +2,7 @@
 
  - 그를 글로 표현하는 행위로는 그가 담고 있는 아름다움의 1할도 표현할 수 없을 것이다. 그러므로 그를 설명할 수 있는 이미지로 설명을 갈음하도록 한다.
   - ~~원작자의 허가를 받지 않고 올린 사진이므로 으에에~~
+ - 그의 바이오: <https://snu-arc.github.io/people/ksh/index.html>
 
 ## 이현제와의 상관관계
 
@@ -9,8 +10,16 @@
 
 ### 김성학 사진전
 
+<<<<<<< HEAD
 ![](../Images/TA-SH.jpeg)
 
 ![](../Images/TA-SH2.jpeg)
 
 ![](../Images/TA-SH3.jpeg)
+=======
+![](./Images/TA-SH.jpeg)
+
+![](./Images/TA-SH2.jpeg)
+
+![](./Images/TA-SH3.jpeg)
+>>>>>>> 4a9aae5ff1e5dcd643135e0d431db53655126b02
