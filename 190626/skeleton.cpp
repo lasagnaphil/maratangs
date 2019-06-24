@@ -41,7 +41,7 @@ int rangeSum(vector<int> psum, int a, int b) {
  * 3. rangeSum을 이용해, 인덱스 a부터 인덱스 b까지의 평균 구하기
  */
 
-int rangeMean(int a, int b) {
+int rangeMean(vector<int> psum, int a, int b) {
     // TODO
 }
 
