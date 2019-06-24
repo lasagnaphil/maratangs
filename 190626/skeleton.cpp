@@ -19,7 +19,7 @@
  * 1. 부분 합 구하는 함수 작성하기
  * intput: vector<int> a
  * output: vector<int>형
- * output[i] = input[0]부터 input[i]까지의 합 
+ * output[i] = a[0]부터 a[i]까지의 합 
  */
 
 vector<int> partialSum(vector<int> a) {
@@ -33,7 +33,7 @@ vector<int> partialSum(vector<int> a) {
  * output: int형 (v[a]부터 v[b]까지의 합)
  */
 
-int rangeSum(vector<int> psum, int a, int y) {
+int rangeSum(vector<int> psum, int a, int b) {
     // TODO
 }
 
