@@ -1,8 +1,25 @@
 /**
+ * 브랜치 이름: 190626/본인 이름
+ * 
+ * 머지 원칙: 스쿼시
+ * (커밋은 몇 개를 만드셔도 상관 없습니다
+ * 대신 마지막에 머지할 때는 스쿼시 머지해 주세요)
+ * 
+ * 머지 기준: 2명 이상의 Approve
+ * (다른 사람들의 코드를 꼼꼼히 리뷰해 줍시다)
+ * 
+ * C++이 아닌 언어로 작성할 경우, 주석은 그대로 두시고
+ * 함수 프로토타입이 최대한 같게 작성해 주세요.
+ * 
+ * 질문이 있는 경우, github의 issue 란에
+ * help wanted, homework, question 등의 label을 붙여서 올려주시면 됩니다.
+ */
+
+/**
  * 1. 부분 합 구하는 함수 작성하기
  * intput: vector<int> a
  * output: vector<int>형
- * output[i] = input[0]부터 input[i]까지의 합 
+ * output[i] = a[0]부터 a[i]까지의 합 
  */
 
 vector<int> partialSum(vector<int> a) {
@@ -24,7 +41,7 @@ int rangeSum(vector<int> psum, int a, int b) {
  * 3. rangeSum을 이용해, 인덱스 a부터 인덱스 b까지의 평균 구하기
  */
 
-int rangeMean(int a, int b) {
+int rangeMean(vector<int> psum, int a, int b) {
     // TODO
 }
 
@@ -43,8 +60,18 @@ double variance(vector<int> sqpsum, vector<int> psum, int a, int b) {
 /**
  * 5. 2차원 배열에서 부분 합 구하기
  * psum[y][x] = (0, 0)부터 (y, x)까지의 합
- * y, x 좌표 순서가 행, 렬 거꾸로 되어 있는 이유는
- * y축을 세로로 주기 위해서일 뿐임~~
+ * (y가 세로 == 행, x가 가로 == 열)
+ * arr[y][x] 포함
+ */
+
+vector<int> calcPsum(vector<vector <int> > arr) {
+    // TODO
+}
+
+/**
+ * 6. 2차원 배열에서 부분 합 구하기
+ * gridSum(psum, y1, x1, y2, x2) = psum이 주어졌을 때,
+ * arr[y1][x1]부터 arr[y2][x2]까지의 합
  */
 
 int gridSum(vector<vector <int> > psum, int y1, int x1, int y2, int x2) {
@@ -52,23 +79,16 @@ int gridSum(vector<vector <int> > psum, int y1, int x1, int y2, int x2) {
 }
 
 /**
- * 5. 2차원 배열에서 부분 합 구하기
- * psum[y][x] = (0, 0)부터 (y, x)까지의 합
- * y, x 좌표 순서가 행, 렬 거꾸로 되어 있는 이유는
- * y축을 세로로 주기 위해서일 뿐임~~
- */
-
-int gridSum(vector<vector <int> > psum, int y1, int x1, int y2, int x2) {
-    // TODO
-}
-
-
-
-/**
- * 6. 배열이 주어졌을 때 합이 0에 가장 가까운 구간을 찾아서
+ * 7. 배열이 주어졌을 때,
+ * 합이 0에 가장 가까운 구간을 찾아서
  * 합을 반환하기
  */
 
 int minAbs(vector<int> a) {
     // TODO
 }
+
+/** 
+ * 8. 크리스마스 문제
+ * https://algospot.com/judge/problem/read/CHRISTMAS
+ */
