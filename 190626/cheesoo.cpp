@@ -28,7 +28,7 @@ vector<int> partialSum(vector<int> a) {
     vector<int> output;
     output.push_back(a[0]);
     for(i=1;i<a.size();i++){
-	output.push_back(&v.back()+a[i]);
+	output.push_back(&output.back()+a[i]);
     }
     return output;
 }
