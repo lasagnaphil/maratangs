@@ -62,7 +62,6 @@ int rangeSum(vector<int> psum, int a, int b) {
 
 int rangeMean(vector<int> psum, int a, int b) {
     // TODO
-    vector<int> psum; // ?
     return rangeSum(psum, a, b) / (b-a+1);
 }
 
@@ -96,7 +95,7 @@ vector<int> calcPsum(vector<vector <int> > arr) {
 
     vector<int> psum2D(M*N); // M*N크기의 벡터
     for(int i = 0; i <= M; i++){
-        for(int = 0; j < N; j++){
+        for(int j = 0; j < N; j++){
             if(i==0 && j==0)
                 psum2D[0] = arr[0][0];
             else
@@ -161,7 +160,7 @@ void christmasProblem(){
         }
 
         //get partial sum vector
-        psum = partialSum(a);
+        psum = partialSum(input);
         vector<int> rangeSumVec;
         //2번 잘 모르겠음 ㅠㅠ
         // ;
