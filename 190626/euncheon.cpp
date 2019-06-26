@@ -178,16 +178,36 @@ void christmasProblem(){
         }
 
         //2번 문제에 대한 답 구하기
+        
+        // 2번 풀이 생각한 것
+        // 0. 인덱스를 두 개 준비한다(left=0, right=0 으로 시작)
+        // 1. 일단 처음 수가 K의 배수면 집어넣고 left를 갱신해서 그게 다시 포함이 안 되도록 함
+        // 2. K의 배수가 아니면 right만 갱신한다
         int left = 0; int right = 0;
-        int partialSumArr[input.size()] = {input[0]};
-        for(int i=1; i<N; i++){
-            partialSumArr[i] = partialSumArr[i-1] + input[i];
-        }
 
-        //2번 잘 모르겠음 ㅠㅠ
-        int maxArr[input.size()] = {0, }; // i번째까지의 최대개수를 저장
-        for(int i=0; i<N; i++){
-            
+        while(left <= right && right < N){
+            if(left == right){
+                if(psum[right] % K == 0) {
+                    cnt2++;
+                    left = right+1;
+                    right = left;
+                }
+                else right++;
+            }
+            else if(left < right){
+                bool flag = false;
+                for(int k = left; k <= right; k++){
+                    if(rangeSum(psum, k, right) % K == 0){
+                        cnt2++;
+                        left = right+1;
+                        right = left;
+                        flag = true;
+                        break;
+                    }
+                }
+                if(!flag)
+                    right++;
+            }
         }
 
         //답 출력
