@@ -60,6 +60,16 @@ double variance(vector<int> sqpsum, vector<int> psum, int a, int b) {
  * y축을 세로로 주기 위해서일 뿐임~~
  */
 
+vector<int> calcPsum(vector<vector<int> > arr){
+	//TODO
+}
+
+/**
+ * 6. 2차원 배열에서 부분 합 구하기
+ * gridSum(psum, y1, x1, y2, x2) = psum이 주어졌을 때,
+ * arr[y1][x1]부터 arr[y2][x2]까지의 합
+ */
+
 int gridSum(vector<vector <int> > psum, int y1, int x1, int y2, int x2) {
 	if (x1 == 0 && y1 == 0) return psum.at(y2).at(x2);
 	if (x1 == 0) return psum.at(y2).at(x2)-psum.at(y1-2).at(psum.at(0).size()-1);
@@ -69,7 +79,7 @@ int gridSum(vector<vector <int> > psum, int y1, int x1, int y2, int x2) {
 
 
 /**
- * 6. 배열이 주어졌을 때 합이 0에 가장 가까운 구간을 찾아서
+ * 7. 배열이 주어졌을 때 합이 0에 가장 가까운 구간을 찾아서
  * 합을 반환하기
  */
 
