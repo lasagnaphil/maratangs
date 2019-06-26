@@ -153,3 +153,43 @@ int minAbs(vector<int> a) {
  * https://algospot.com/judge/problem/read/CHRISTMAS
  * 이건 내일 할게요....
  */
+void christmas(){
+    int numberofTestCase = 0;
+    int numberofGotchabox = 0;
+    int numberofChildren = 0;
+
+    int numberofPossibleOrder = 0;
+    cin << numberofTestCase;
+
+    while(numberofTestCase!=0){
+	cin << numberofGotchabox;
+	cin << numberofChildren;
+
+	int numberofGiftintheBox = 0;
+	vector<int> a;
+	while(numberofGotchabox!=0){
+	    cin << numberofGiftintheBox;
+	    a.pushback(numberofGiftintheBox);
+	    numberofGotchabox--;
+	}
+	vector<int> psum = partialSum(a);
+	int i=0,j=0;
+	int indexfix=psum.size(),notifyfix=0;
+	for(i=psum.size();i>0;i--){
+	    for(j=i;j>0;j--){
+		if(rangeSum(psum,j,i)%numberofChildren==0){
+		    numberofPossibleOrder++;
+		    if(i<indexfix && notifyfix==0){
+			indexfix = i;
+			notifyfix=1;
+		    }
+		}
+	    }
+	    notifyfix=0;
+	}
+
+	numberofTestCase--;
+    }
+    cout << numberofPossibleOrder%20091101 << " ";
+
+}
