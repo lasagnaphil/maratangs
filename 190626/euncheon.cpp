@@ -16,6 +16,7 @@
  */
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 /**
@@ -75,8 +76,8 @@ int rangeMean(vector<int> psum, int a, int b) {
 
 double variance(vector<int> sqpsum, vector<int> psum, int a, int b) {
     // TODO
-    int mean = rangeMean(a, b);
-    int sqmean = rangeMean(a, b);
+    int mean = rangeMean(psum, a, b);
+    int sqmean = rangeMean(sqpsum, a, b);
     double res = (double)sqmean - (double)(mean*mean);
     return res;
 }
@@ -113,12 +114,7 @@ vector<int> calcPsum(vector<vector <int> > arr) {
 
 int gridSum(vector<vector <int> > psum, int y1, int x1, int y2, int x2) {
     // TODO
-    int sum = 0;
-    for(int i = y1; i <= y2; i++){
-        for(int j = x1; j <= x2; j++){
-            sum += psum[i][j];
-        }
-    }
+    return psum[y2][x2] - psum[y1 - 1][x1 - 1];
 }
 
 /**
@@ -130,9 +126,13 @@ int gridSum(vector<vector <int> > psum, int y1, int x1, int y2, int x2) {
 int minAbs(vector<int> a) {
     // TODO
     vector<int> psum = partialSum(a);
-    min = psum[0];
+    //크기순 정렬
+    sort(psum.begin(), psum.end());
+    int min = psum[0];
+    //차이 가장 작은 구간 찾기
     for(int i=1; i<psum.size(); i++){
-        for(int j=)
+        if(psum[i] - psum[i-1] < min)
+            min = psum[i] - psum[i-1];
     }
     return min;
 }
@@ -148,23 +148,28 @@ void christmasProblem(){
     scanf("%d", &T);
     while(T--){
         vector<int> input;
+        vector<int> psum;
         int cnt1 = 0; //1번 문제 답
         int cnt2 = 0; //2번 문제 답
         int val;
         scanf("%d %d", &N, &K);
 
-        //각 인형 상자에 들어있는 인형의 개수
+        //input: 각 인형 상자에 들어있는 인형의 개수
         for(int i=0; i<N; i++){
             scanf("%d", &val);
             input.push_back(val);
         }
 
-        int rangeSumVec[];
-        for(int i=0; i<N; i++){
-            for(int j=i; j<N; j++){
-                rangeSumVec.push_back(&input, i, j);
-            }
-        }
+        //get partial sum vector
+        psum = partialSum(a);
+        vector<int> rangeSumVec;
+        //2번 잘 모르겠음 ㅠㅠ
+        // ;
+        // for(int i=0; i<N; i++){
+        //     for(int j=i; j<N; j++){
+        //         rangeSumVec.push_back(&input, i, j);
+        //     }
+        // }
 
         //1번 문제에 대한 답 구하기
         for(int i=0; i<rangeSumVec.size(); i++){
@@ -179,6 +184,7 @@ void christmasProblem(){
             partialSumArr[i] = partialSumArr[i-1] + input[i];
         }
 
+        //2번 잘 모르겠음 ㅠㅠ
         int maxArr[input.size()] = {0, }; // i번째까지의 최대개수를 저장
         for(int i=0; i<N; i++){
             
