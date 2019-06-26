@@ -55,11 +55,11 @@ int rangeSum(vector<int> psum, int a, int b) {
  */
 
 int rangeMean(vector<int> psum, int a, int b) {
-    if(b==a){
-	return rangeSum(psum,a,b);
-    }else{
+    //if(b==a){
+//	return rangeSum(psum,a,b);
+  //  }else{
 	return rangeSum(psum,a,b)/(b-a+1);
-    }
+    //}
 }
 
 /**
