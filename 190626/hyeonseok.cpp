@@ -60,8 +60,22 @@ double variance(vector<int> sqpsum, vector<int> psum, int a, int b) {
  * y축을 세로로 주기 위해서일 뿐임~~
  */
 
-vector<int> calcPsum(vector<vector<int> > arr){
-	//TODO
+vector<vector<int> > calcPsum(vector<vector<int> > arr){
+	int sum;
+	vector<vector<int> > output;
+	for (int i=0; i<arr.size(); i++){
+		vector<int> row;
+		sum = 0;
+		for (int j=0; j<arr.at(0).size(); j++){
+			sum += arr.at(i).at(j);	
+			for (int k=0; k<i; k++){
+				sum += arr.at(k).at(j);
+			}
+			row.push_back(sum);
+		}
+		output.push_back(row);
+	}	
+	return output;
 }
 
 /**

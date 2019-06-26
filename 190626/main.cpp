@@ -46,16 +46,8 @@ int main(){
 		cout << endl;
 	}
 	vector<vector<int> > gridpsum;
-	int sum = 0;
-	for (int i=0;i<grid.size(); i++){
-		vector<int> row;
-		for (int j=0; j<grid.at(i).size(); j++){
-			sum += grid.at(i).at(j);
-			row.push_back(sum);
-		}
-		gridpsum.push_back(row);
-	}
-	cout << "gridsum of grid: " << gridSum(gridpsum, 0, 0, 9, 9) << endl;
+	gridpsum = calcPsum(grid);
+	cout << "gridsum of grid: " << gridSum(gridpsum, 0, 0, 9, 10) << endl;
 
 	cout << "minAbs of v: " << minAbs(v) << endl;
 
