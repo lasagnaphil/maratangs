@@ -88,19 +88,23 @@ double variance(vector<int> sqpsum, vector<int> psum, int a, int b) {
  * arr[y][x] 포함
  */
 
-vector<int> calcPsum(vector<vector <int> > arr) {
+vector<vector <int>> calcPsum(vector<vector <int> > arr) {
     vector<vector<int>> psum;
     int colIndex = arr[0].size();
     int rowIndex = arr.size();
 
     int i=0, j=0;
-    for(j=0;j<colIndex;j++){
-	psum[0][j] = arr[0][j];
+    psum[0][0] = arr[0][0];
+    for(j=1;j<colIndex;j++){
+	psum[0][j] = psum[0][j-1] + arr[0][j];
+    }
+    for(i=1;i<rowIndex;i++){
+	psum[i][0] = psum[i-1][0] + arr[i][0];
     }
 
     for(i=1;i<rowIndex;i++){
-	for(j=0;j<colIndex;j++){
-	    psum[i][j] = psum[i-1][j] + arr[i][j];
+	for(j=1;j<colIndex;j++){
+	    psum[i][j] = psum[i-1][j] + psum[i][j-1] + arr[i][j] - psum[i-1][j-1];
 	}
     }
     return psum;
