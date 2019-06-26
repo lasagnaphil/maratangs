@@ -135,7 +135,7 @@ int gridSum(vector<vector <int> > psum, int y1, int x1, int y2, int x2) {
  */
 
 int minAbs(vector<int> a) {
-    vector<int> psum = calPsum(a);
+    vector<int> psum = partialSum(a);
     int least = a[0];
     int leastIndex = 0;
     int i=0;
